@@ -1,0 +1,203 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background: #150022;
+  color: #EDE7FF;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+header.primary {
+  position: relative;
+  text-align: center;
+  padding: 2em 2em 1.5em;
+  border-bottom: 1px solid #B884F20F;
+  color: #EDE7FF;
+  background-image: url("https://images-assets.nasa.gov/image/PIA22081/PIA22081~orig.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+header.primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #7C1FA780, #15002299);
+  z-index: 0;
+  pointer-events: none;
+}
+
+header.primary h1,
+header.primary h2 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+
+header.primary h1 a {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header.primary h2 {
+  font-family: "Goldman", cursive;
+  font-size: 1.5rem;
+  margin-top: 0.5em;
+  color: #B884F2;
+}
+
+header.primary nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: 1em;
+  gap: 10px;
+}
+
+header.primary nav li {
+  list-style: none;
+}
+
+header.primary nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background-color: rgba(140, 60, 42, 0.7);
+  transition: background 0.3s;
+}
+
+header.primary nav a:hover {
+  background-color: rgba(140, 60, 42, 1);
+}
+
+section#content {
+  padding: 4em 0;
+}
+
+#content h2 {
+  text-align: center;
+  font-family: "Goldman", cursive;
+  color: #B884F2;
+}
+
+#content p {
+  max-width: 800px;
+  margin: 0 auto 1.5em;
+  text-align: justify;
+  color: #EDE7FF;
+}
+
+#articles .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 800px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+#articles article.post {
+  background: #260033;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #B884F20F;
+  transition: 0.3s;
+}
+
+#articles article.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px #7C1FAF40;
+}
+
+#articles .post a {
+  color: #7C1FAF;
+  text-decoration: none;
+}
+
+#mars-top figure {
+  text-align: center;
+}
+
+#mars-top figcaption {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+#hero {
+  padding: 4em 0;
+}
+
+.img-center {
+  display: block;
+  margin: 0 auto;
+  max-width: 70%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px #7C1FAF40;
+}
+
+#hero figcaption {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+figure {
+  text-align: center;
+}
+
+figure figcaption {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.faq-item h3 {
+  text-align: center;
+  color: #B884F2;
+  font-family: "Goldman", cursive;
+}
+
+.faq-item p {
+  text-align: center;
+  color: #E0E0E0;
+}
+
+footer#colophon {
+  background: #3E0066;
+  color: #EDE7FF;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #B884F20F;
+}
+
+footer#colophon a {
+  color: #B884F2;
+}
+
+footer#colophon a:hover {
+  color: #7C1FAF;
+}
+
+@media (max-width: 800px) {
+  header.primary nav ul {
+    flex-direction: column;
+  }
+
+  .img-center {
+    max-width: 90%;
+  }
+}
+
