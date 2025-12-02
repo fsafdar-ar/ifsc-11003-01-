@@ -1,0 +1,258 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background: #150022;
+  color: #EDE7FF;
+  line-height: 1.6;
+}
+
+img{
+  width:100%;
+  height:250px;
+  object-fit:contain;
+  display:block;
+  margin:0 auto;
+  border-radius:10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header.primary {
+  position: relative;
+  text-align: center;
+  padding: 2em 2em 1.5em;
+  border-bottom: 1px solid #B884F20F;
+  color: #EDE7FF;
+  background-image: url("https://images-assets.nasa.gov/image/PIA22081/PIA22081~orig.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+header.primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #7C1FA780, #15002299);
+  z-index: 0;
+  pointer-events: none;
+}
+
+header.primary h1,
+header.primary h2 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+
+header.primary h1 a {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+header.primary h2 {
+  font-family: "Goldman", cursive;
+  font-size: 1.5rem;
+  margin-top: 0.5em;
+  color: #B884F2;
+}
+
+header.primary nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: 1em;
+  gap: 10px;
+}
+
+header.primary nav li {
+  list-style: none;
+}
+
+header.primary nav a {
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background-color: rgba(234, 49, 8, 0.9);
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+header.primary nav a:hover {
+  background-color: rgb(233, 63, 25);
+}
+
+section#content {
+  padding: 4em 0;
+}
+
+#content h2 {
+  text-align: center;
+  font-family: "Goldman", cursive;
+  color: #B884F2;
+}
+
+#content p {
+  max-width: 800px;
+  margin: 0 auto 1.5em;
+  text-align: justify;
+  color: #EDE7FF;
+}
+
+#articles .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 800px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+#articles article.post {
+  background: #260033;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #B884F20F;
+}
+
+#articles .post a {
+  color: #7C1FAF;
+}
+
+figure {
+  text-align: center;
+}
+
+figure figcaption {
+  font-weight: bold;
+  margin-top: 8px;
+  font-size: 1.1rem;
+}
+
+.img-center {
+  display: block;
+  margin: 0 auto;
+  max-width: 70%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px #7C1FAF40;
+}
+
+.accordion {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.accordion h3 {
+  font: 600 1.2rem 'Montserrat', sans-serif;
+  text-align: center;
+  color: #fff;
+  background: #380b4c;
+  margin: 15px 0;
+  padding: 20px 40px 20px 15px;
+  cursor: pointer;
+  border-radius: 12px;
+  position: relative;
+}
+
+.accordion h3::after {
+  content: "\25BC";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s;
+}
+
+.accordion h3.active {
+  background: #220642;
+}
+
+.accordion h3.active::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.accordion p {
+  margin: 0 0 15px;
+  padding: 20px;
+  background: #260033;
+  color: #EDE7FF;
+  border-radius: 12px;
+  text-align: center;
+  display: none;
+  line-height: 1.7;
+}
+
+.accordion h3:hover {
+  background: #4b0c70;
+}
+
+footer#colophon {
+  background: #3E0066;
+  color: #EDE7FF;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #B884F20F;
+}
+
+footer#colophon a {
+  color: #B884F2;
+  transition: color 0.3s;
+}
+
+footer#colophon a:hover {
+  color: #7C1FAF;
+}
+
+#rover-comparison {
+  max-width: 800px;
+  margin: 2em auto;
+  text-align: center;
+   margin-top: -2em;
+}
+
+#rover-comparison h2 {
+  font-family: 'Goldman', cursive;
+  color: #B884F2;
+  margin-bottom: 1em;
+}
+
+#rover-comparison table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #260033;
+  color: #EDE7FF;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px #7C1FAF40;
+}
+
+#rover-comparison th,
+#rover-comparison td {
+  padding: 12px;
+  border: 1px solid #B884F20F;
+  text-align: center;
+}
+
+#rover-comparison th {
+  background: #380b4c;
+}
+
+#rover-comparison tr:hover {
+  background: #4b0c70;
+}
+
+@media (max-width: 800px) {
+  header.primary nav ul {
+    flex-direction: column;
+  }
+}
+
